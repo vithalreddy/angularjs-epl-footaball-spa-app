@@ -1,0 +1,98 @@
+<section class="appSection">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="allDataTable table-responsive text-center">
+                    <h1 style="color:red">English Premier League Club Matches</h1>
+                    <!-- filters start -->
+                    <div class="well">
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label class=" col-xs-12">Filter By Team Name: </label>
+                                <div class="col-xs-12">
+                                    <input type="text" class="form-control" ng-model="searchTeam" placeholder="Enter your Favourite Team Name" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class=" col-xs-12">Filter By Team 1 Goals: </label>
+                                <div class="col-xs-12">
+
+                                    <input type="text" class="search form-control input-sm" ng-model="searchByScore1.score1" placeholder="Enter Score To Search" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class=" col-xs-12">Filter By Team 2 Goals: </label>
+                                <div class="col-xs-12">
+                                    <input type="text" class="search form-control input-sm" ng-model="searchByScore2.score2" placeholder="Enter Score To Search" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class=" col-xs-12">Filter By Year: </label>
+                                <div class="col-xs-12">
+                                    <input type="text" class="search form-control input-sm" ng-model="searchByYear" placeholder="Enter Year To Search" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- filters end -->
+
+
+                    <table class="table table-bordered table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th class="text-center">
+                                    [Date]
+                                </th>
+                                <th class="text-center">
+                                    [Team 1]
+                                </th>
+                                <th class="text-center">
+                                    [Team 2]
+                                </th>
+                                <th class="text-center">
+                                    [ Score 1]
+                                </th>
+                                <th class="text-center">
+                                    [Score 2]
+                                </th>
+                                <th class="text-center">
+                                    [View Match]
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody ng-repeat='round in myData.combinedData '>
+                            <tr ng-repeat="match in round.matches  | filter:searchTeam | filter:searchByScore1 | filter:searchByScore2 | filter:searchByYear">
+                                <td>
+                                    {{ match.date | date: "fullDate" }}
+                                    <hr>{{round.name}}
+                                </td>
+                                <td>
+                                    <a ng-href="#/team-view/{{ match.team1.code }}/{{ match.team1.key }}" title="View Team Statistics">{{ match.team1.name }}</a>
+                                    <br> code: "{{ match.team1.code }}"
+                                </td>
+                                <td>
+                                    <a ng-href="#/team-view/{{ match.team2.code }}/{{ match.team2.key }}" title="View Team Statistics">{{ match.team2.name }}</a>
+                                    <br> code: "{{ match.team2.code }}"
+
+                                </td>
+                                <td>
+                                    <span>{{match.score1 }}</span><span ng-show="match.score1 === null">"Not Available Yet"</span>
+                                </td>
+                                <td>
+                                    <span>{{match.score2 }}</span><span ng-show="match.score2 === null">"Not Available Yet"</span>
+                                </td>
+                                <td> <a ng-href='#/view-match/{{ match.date | date:"yyyyMMdd" }}/{{ match.team1.code }}/vs/{{ match.team2.code }}' title="View Match Full Details">View Match Stats</a>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <!--  allDatatable end -->
+                <div>
+                    <!-- col end -->
+                </div>
+                <!--  row end -->
+            </div>
+            <!-- conteiner-fluid end -->
+</section>

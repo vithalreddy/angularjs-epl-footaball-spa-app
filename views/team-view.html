@@ -1,0 +1,187 @@
+<section class="appSection">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="allDataTable table-responsive text-center ">
+                    <a href="#/" class="btn btn-primary btn-primary"><span class="glyphicon glyphicon-home"></span> Go To Homepage</a>
+                    <hr>
+
+                    <br>
+                    <h1 style="color: purple; font-family: monospace;">Overall "<span ng-show="singleTeam.teamname1">{{singleTeam.teamname1}}</span><span ng-show="!singleTeam.teamname1">{{singleTeam.teamname2}}</span>" Team Statistics</h1>
+                    <table class="table table-bordered table-striped table-hover ">
+                        <thead>
+                            <tr>
+                                <th colspan="2" class="text-center" style="color: #FF1744;">
+                                    [ English Premier League Club Matches 2015 / 2016 ]
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Total Matches Played:
+                                </td>
+                                <td>
+                                    {{singleTeam.totalMatchesPlayed1.length}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Total Won Matches:
+                                </td>
+                                <td>
+                                    {{singleTeam.totalWins1.length}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Total Lost Matches:
+
+                                </td>
+                                <td>
+                                    {{singleTeam.totalLost1.length}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Total Tied Matches:
+                                </td>
+                                <td>
+                                    {{singleTeam.totaltie1.length}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Total Goals Scored:
+                                </td>
+                                <td>
+                                    {{singleTeam.totalgoals1}}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <hr>
+                    <br>
+                    <h2 style="color: red">Following Data is not updated since 2016-10-15 in "openfootball json data api" so their may be incorrectness in data shown below. But Don't worry following data will be automatically show correct statistics once openfootball api is updated.</h2>
+                    <br>
+                    <table class="table table-bordered table-striped table-hover ">
+                        <thead>
+                            <tr>
+                                <th colspan="2" class="text-center" style="color: #FF1744;">
+                                    [ English Premier League Club Matches 2016 / 2017 ]
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Total Matches Played:
+                                </td>
+                                <td>
+                                    {{singleTeam.totalMatchesPlayed2.length}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Total Won Matches:
+                                </td>
+                                <td>
+                                    {{singleTeam.totalWins2.length}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Total Lost Matches:
+
+                                </td>
+                                <td>
+                                    {{singleTeam.totalLost2.length}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Total Tied Matches:
+                                </td>
+                                <td>
+                                    {{singleTeam.totaltie2.length}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Total Goals Scored:
+                                </td>
+                                <td>
+                                    {{singleTeam.totalgoals2}}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <hr>
+                    <br>
+                    <h2 style="color: red">Following Data is not updated since 2016-10-15 in "openfootball json data api" so their may be incorrectness in data shown below. But Don't worry following data will be automatically show correct statistics once openfootball api is updated.</h2>
+                    <br>
+                    <table class="table table-bordered table-striped table-hover ">
+                        <thead>
+                            <tr>
+                                <th colspan="2" class="text-center" style="color: #FF1744;">
+                                    [ Overall English Premier League Club Matches Statistics ]
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Total Matches Played:
+                                </td>
+                                <td>
+                                    {{singleTeam.totalMatchesPlayed}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Total Won Matches:
+                                </td>
+                                <td>
+                                    {{singleTeam.totalWins}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Total Lost Matches:
+
+                                </td>
+                                <td>
+                                    {{singleTeam.totalLost}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Total Tied Matches:
+                                </td>
+                                <td>
+                                    {{singleTeam.totaltie}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Total Goals Scored:
+                                </td>
+                                <td>
+                                    {{singleTeam.totalgoals}}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+
+
+                    <hr><a href="#/" class="btn btn-primary btn-primary"><span class="glyphicon glyphicon-home"></span> Go To Homepage</a> <br>
+                </div>
+                <!--  allDatatable end -->
+                <div>
+                    <!-- col end -->
+                </div>
+                <!--  row end -->
+            </div>
+            <!-- conteiner-fluid end -->
+</section>
